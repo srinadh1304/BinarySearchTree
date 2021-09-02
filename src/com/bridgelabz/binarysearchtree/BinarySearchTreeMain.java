@@ -21,8 +21,8 @@ public class BinarySearchTreeMain {
 		System.out.println("Inorder traversal: ");
 		myBinaryTree.inorderTraversal();
 		System.out.println();
-		System.out.println("the size of tree is :"+ myBinaryTree.getSize());
+		System.out.println("The size of tree is :"+ myBinaryTree.getSize());
 		
-		System.out.println("IS 65 present? : "+ myBinaryTree.search(65));
+		System.out.println("Is 25 present? : "+ myBinaryTree.search(65));
 	}
 }
