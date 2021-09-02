@@ -8,7 +8,7 @@ public class BinarySearchTreeMain {
 		myBinaryTree.add(30);
 		myBinaryTree.add(70);
 		
-		System.out.println("inorder traversal is:");
+		System.out.println("Inorder traversal : ");
 		myBinaryTree.inorderTraversal();
 	}
 }
