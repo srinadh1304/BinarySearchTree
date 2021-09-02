@@ -18,10 +18,11 @@ public class BinarySearchTreeMain {
 		myBinaryTree.add(57);
 		myBinaryTree.add(69);
 		myBinaryTree.add(67);
-		
-		System.out.println("inorder traversal is:");
+		System.out.println("Inorder traversal: ");
 		myBinaryTree.inorderTraversal();
 		System.out.println();
 		System.out.println("the size of tree is :"+ myBinaryTree.getSize());
+		
+		System.out.println("IS 65 present? : "+ myBinaryTree.search(65));
 	}
 }
