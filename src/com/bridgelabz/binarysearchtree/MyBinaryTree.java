@@ -2,8 +2,8 @@ package com.bridgelabz.binarysearchtree;
 
 public class MyBinaryTree<K extends Comparable> {
 	private MyBinaryNode<K> root;
-	
-	
+
+
 	public void inorderTraversal() {
 		inorder(this.root);
 	}
@@ -13,7 +13,7 @@ public class MyBinaryTree<K extends Comparable> {
 		System.out.print(current.key+" ");
 		inorder(current.left);
 	}
-	
+
 	private MyBinaryNode<K> addRecursively(MyBinaryNode<K> current, K key){
 		if(current == null) {
 			return new MyBinaryNode<K>(key);
@@ -35,10 +35,23 @@ public class MyBinaryTree<K extends Comparable> {
 	public int getSize() {
 		return this.getSizeRecursive(root);
 	}
-	
+
 	private int getSizeRecursive(MyBinaryNode<K> current) {
 		return current == null ? 0 :1 + this.getSizeRecursive(current.left)+this.getSizeRecursive(current.right);
 	}
-	
+	public boolean search(K key) {
+		return this.searchRecursive(this.root,key);
+	}
+
+	private boolean searchRecursive(MyBinaryNode<K> current, K key) {
+		if(current == null ) return false;
+		int compareResult = key.compareTo(current.key);
+		if(compareResult == 0) return true;
+		if(compareResult > 0) {
+			return searchRecursive(current.left, key);
+		}
+
+		return searchRecursive(current.right, key);
+	}	
 
 }
